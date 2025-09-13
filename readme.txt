@@ -4,9 +4,11 @@ $ mkdir Cristoria_IT108
 $ cd Cristoria_IT108
 $ git init
 $ git branch -m master main
+$ touch readme.txt
+$ mkdir IT108_Activity
+$ cd IT108_Activity
 $ mkdir mysql_activity1
 $ mkdir join_activity2
-$ touch readme.txt
 $ git add .
 $ notepad readme.txt
   ctrl + s
