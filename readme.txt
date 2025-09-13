@@ -13,5 +13,5 @@ $ notepad readme.txt
 $ git remote add origin https://github.com/messy332/IT108.git
 $ git push -u origin main
 $ git commit -m "Save Changes"
-
+$ git push
 
