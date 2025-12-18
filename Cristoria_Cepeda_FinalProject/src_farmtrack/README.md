@@ -130,10 +130,6 @@ Visit `http://localhost:8000` in your browser.
 | Charts | Chart.js |
 | Build Tool | Vite |
 
-## License
-
-This project is proprietary software developed for agricultural management in the Philippines.
-
 ---
 
 <p align="center">
