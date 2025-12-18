@@ -1,61 +1,151 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/images/farmtrack-logo.png" width="200" alt="FarmTrack Logo">
 </p>
 
-## About Laravel
+<h1 align="center">FarmTrack</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <strong>A Smart Agricultural Management System for Filipino Farmers</strong>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#tech-stack">Tech Stack</a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## About FarmTrack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+FarmTrack is a comprehensive web-based agricultural management system designed specifically for Filipino farmers. It provides an intuitive platform to monitor crops, track farm activities, visualize farm boundaries on interactive maps, and generate insightful analytics to improve farming productivity.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🗺️ Interactive Farm Mapping
+- View farm location on an interactive map centered on the Philippines
+- Draw and manage farm boundaries using polygon tools
+- Color-coded crop markers showing status (Planted, Growing, Harvested, Failed)
+- Click-to-view detailed information for farms and crops
 
-## Laravel Sponsors
+### 🌾 Crop Management
+- Track multiple crops with detailed information
+- Monitor growth stages and progress
+- Record planting and expected harvest dates
+- Manage crop varieties and seasons
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📊 Analytics & Reports
+- **Farm Status Chart**: Track average growth stage over time
+- **Activity Analysis**: View growth rates by activity type
+- **Area Utilization**: Visualize planted vs available farm area
 
-### Premium Partners
+### 📍 Location Management
+- Set farm location via GPS, manual coordinates, or map click
+- Draw precise farm boundaries
+- Auto-detect current location
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 📝 Activity Tracking
+- Log farming activities with timestamps
+- Track weather conditions during activities
+- Monitor growth stages per activity
 
-## Contributing
+### 👨‍🌾 Farmer Dashboard
+- Quick statistics overview (Total Crops, Active Crops, Total Area)
+- Recent activity feed
+- Direct access to crop details and management
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Installation
 
-## Code of Conduct
+### Prerequisites
+- PHP 8.1+
+- Composer
+- Node.js & NPM
+- MySQL/MariaDB
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Setup
 
-## Security Vulnerabilities
+1. Clone the repository
+```bash
+git clone https://github.com/your-repo/farmtrack.git
+cd farmtrack
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. Install PHP dependencies
+```bash
+composer install
+```
+
+3. Install Node dependencies
+```bash
+npm install
+```
+
+4. Configure environment
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+5. Configure your database in `.env`
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=farmtrack
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+6. Run migrations and seeders
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+7. Build assets
+```bash
+npm run build
+```
+
+8. Start the development server
+```bash
+php artisan serve
+```
+
+Visit `http://localhost:8000` in your browser.
+
+## Usage
+
+### For Farmers
+1. **Register/Login** to your farmer account
+2. **Dashboard** - View your farm overview with interactive map
+3. **Update Location** - Set your farm boundaries using the drawing tools
+4. **Manage Crops** - Add, edit, and track your crops
+5. **View Analytics** - Monitor farm performance through charts and reports
+
+### For Administrators
+- Manage farmer accounts
+- View system-wide analytics
+- Configure system settings
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Backend | Laravel (PHP) |
+| Frontend | Blade Templates, Tailwind CSS |
+| Database | MySQL |
+| Maps | Leaflet.js + OpenStreetMap |
+| Charts | Chart.js |
+| Build Tool | Vite |
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is proprietary software developed for agricultural management in the Philippines.
+
+---
+
+<p align="center">
+  Made with ❤️ for Filipino Farmers
+</p>
