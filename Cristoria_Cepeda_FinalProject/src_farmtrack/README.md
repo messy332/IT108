@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="public/images/farmtrack-logo.png" width="200" alt="FarmTrack Logo">
-</p>
-
 <h1 align="center">FarmTrack</h1>
 
 <p align="center">
@@ -67,7 +63,7 @@ FarmTrack is a comprehensive web-based agricultural management system designed s
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-repo/farmtrack.git
+git clone https://github.com/messy332/IT108/tree/main/Cristoria_Cepeda_FinalProject/src_farmtrack
 cd farmtrack
 ```
 
