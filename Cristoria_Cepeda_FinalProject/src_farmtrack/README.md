@@ -64,7 +64,7 @@ FarmTrack is a comprehensive web-based agricultural management system designed s
 1. Clone the repository
 ```bash
 git clone https://github.com/messy332/IT108/tree/main/Cristoria_Cepeda_FinalProject/src_farmtrack
-cd farmtrack
+cd src_farmtrack
 ```
 
 2. Install PHP dependencies
@@ -93,18 +93,12 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password
 ```
 
-6. Run migrations and seeders
-```bash
-php artisan migrate
-php artisan db:seed
-```
-
-7. Build assets
+6. Build assets
 ```bash
 npm run build
 ```
 
-8. Start the development server
+7. Start the development server
 ```bash
 php artisan serve
 ```
